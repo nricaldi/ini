@@ -8,8 +8,8 @@
     <title>INI Services</title>
 </head>
 <body>
-    <!-- <header> -->
-        <nav>
+    <header id="home">
+        <nav id="nav">
             <img src="./img/logo.svg" alt="logo" class="logo">
 
             <div class="hamburger">
@@ -18,17 +18,20 @@
                 <div class="line"></div>
             </div>
 
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <!-- </header> -->
+        </header>
 
     <section class="hero">
-        <h1>We build <span>your</span> dreams into <span>reality</span></h1>
+        <div>
+            <h1>We build <span>your</span> dreams</h1>
+            <h1>into <span>reality.</span></h1>
+        </div>
     </section>
 
     <section id="about">
@@ -37,12 +40,14 @@
         <h2><span>About</span> Us</h2>
         <p>We are the most professional home improvement service in the DMV area. I.N.I. offers you the most cost effective way to get  all your jobs done quickly and professionally. No job too big. No job too small.  Contact the us today and get those odd jobs finished quickly and hassle free!</p>
 
-        <div class="call">
-            <h3>Call For a Quote: </h3>
-            <h3>(703) - 582 - 9734</h3>
+        <div class="red">
+            <div>
+                <h3>Call For a free Quote:</h3>
+                <h3>(703) - 582 - 9734</h3>
+            </div>
         </div>
         
-        <a href="#"><button class="btn">Message Us</button></a>
+        <a href="#contact" class="message"><button class="btn btn-light">Message Us</button></a>
     </section>
     
     <section class="how">
@@ -66,7 +71,7 @@
 
     <section id="services">
         <div class="services">
-
+            <h2>Our <span>Services</span></h2>
             <!-- 
                 ========================
                         INTERIOR
@@ -329,5 +334,9 @@
 
 
     <div>Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a></div><div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a></div><div>Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a></div><div>Icons made by <a href="https://www.flaticon.com/authors/prosymbols" title="Prosymbols">Prosymbols</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a></div><div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a></div><div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a></div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/app.js" ></script>
 </body>
 </html>
