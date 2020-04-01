@@ -30,7 +30,7 @@ function smoothscroll(target, duration) {
 }
 
 var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 500,
+    speed: 300,
     offset: navheight,
     updateURL: false
 });
