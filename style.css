@@ -37,13 +37,6 @@ span {
     cursor: pointer;
 }
 
-.btn-light {
-    color: var(--red);
-    border-color:  var(--red);
-    transition: all 500ms ease-in-out;
-    cursor: pointer;
-}
-
 .btn-light:hover {
     color: var(--dark-gray);
     background: var(--light-gray);
@@ -77,8 +70,6 @@ header{
     position: fixed;
     width: 100%;
     height: 10vh;
-    /* height: auto; */
-    /* opacity: .5; */
     z-index: 2;
 }
 
@@ -89,7 +80,6 @@ nav {
     align-items: center;
     position: relative;
     background: #FFF;
-    /* background: rgba(0,0,0,.5); */
     height: 100%;
 }
 
@@ -191,10 +181,6 @@ nav {
         height: 90%;
         /* background: #fff; */
     }
-
-    .nav-container {
-
-    }
     
     .hamburger {
         display: none;
@@ -289,7 +275,6 @@ nav {
 ****************************************   */  
 
 #about {
-    /* background: var(--dark-gray); */
     background: #373737;
 }
 
@@ -504,43 +489,45 @@ nav {
 ****************************************   */  
 
 #services {
-    /* background: var(--light-gray); */
     text-align: center;
     padding: 2rem 0;
-    /* padding-bottom: 2rem; */
 
 }
 
-.services {
-    max-width: 1440px;
+#services {
+    max-width: 1100px;
     margin: 0 auto;
+}
+
+#services h2 {
+    margin-bottom: 2rem;
 }
 
 .service {
     height: 100%;
-    position: relative;
+    /* height: 200px; */
     background: var(--dark-gray);
     color: var(--light-gray);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* display: none; */
+    padding-top: 1rem;
+    text-align: center;
 }
 
 .service h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .more-info {
-    position: absolute;
-    top: 0%;
-    /* transform: translateY(-50%); */
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--dark-gray);
-    height: 100%;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65%;
+    width: 90%;
+    margin: 0 auto;
+    font-size: .8rem;
+}
+
+.info {
     display: none;
 }
 
@@ -549,6 +536,70 @@ nav {
 }
 
 
+.more-info ul li {
+    display: inline-block;
+    border: solid 1px var(--red);
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 8px;
+
+}
+
+
+@media(min-width: 500px) {
+    .more-info {
+        font-size: .9rem;
+    }
+    
+}
+
+@media(min-width: 600px) {
+    .more-info {
+        font-size: 1rem;
+    }
+    
+}
+
+ @media(min-width: 850px) {
+
+    #services h2 {
+        font-size: 2.5rem;
+    }
+    
+    .service {
+        height: 270px;
+        background: var(--dark-gray);
+        color: var(--light-gray);
+        padding-top: 3rem;
+        text-align: center;
+    }
+    
+    .service h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .more-info {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 1rem;
+    }
+    
+    .more-info ul {
+        list-style: none;
+    }
+    
+    
+    .more-info ul li {
+        display: inline-block;
+        border: solid 1px var(--red);
+        padding: 5px;
+        margin-right: 5px;
+        margin-bottom: 8px;
+    
+    }
+    
+} 
 
 /*  ****************************************
 
@@ -559,9 +610,9 @@ nav {
 
 .carousel {
     position: relative;
-    height: 300px;
-    width: 70%;
-    max-width: 1400px;
+    height: 270px;
+    width: 80%;
+    /* max-width: 100px; */
     margin: 0 auto;
 }
 
@@ -593,7 +644,7 @@ nav {
 
 .carousel__button {
     position: absolute;
-    top: 50%;
+    top: 70%;
     transform: translateY(-50%);
     background: transparent;
     border: 0;
@@ -601,11 +652,11 @@ nav {
 }
 
 .carousel__button--left {
-    left: -40px;
+    left: -25px;
 }
 
 .carousel__button--right {
-    right: -40px;
+    right: -25px;
 }
 
 .carousel__button img{
@@ -643,6 +694,74 @@ nav {
 }
 
 
+ @media(min-width: 850px) {
+
+    .carousel {
+        height: auto;
+    }
+
+    .carousel__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel__track-container {
+        height: auto;
+        position: relative;
+    }
+
+    .carousel__track {
+        list-style: none;
+        position: relative;
+        height: 100%;
+        transition: transform 500ms ease-in;
+    }
+
+    .carousel__slide {
+        position: relative;
+    }
+
+    .carousel__button,
+    .carousel__nav {
+        display: none;
+    }
+ 
+
+
+
+/*  ****************************************
+
+            Carousel - GRID
+
+****************************************   */  
+
+
+
+
+    .carousel__track {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 1rem;
+    }
+
+    .carousel__slide {
+         margin-bottom: 1rem;
+    }
+    #service1 {
+        grid-column: 1/3;
+    }
+
+    #service4 {
+        grid-column: 2/4;
+    }
+
+
+
+}
+
+
 /*  ****************************************
 
                 Dont - Find
@@ -658,6 +777,14 @@ nav {
 }
 
 .dont-find .text {
-    width: 60%;
+    /* width: 70%; */
+    max-width: 1400px;
     margin: 0 auto;
+}
+
+@media(min-width: 768px) {
+    .dont-find {
+        margin-top: 1rem;
+
+    }
 }

@@ -76,9 +76,7 @@
 
 
 
-
-    <!-- <section id="services"> -->
-        <div class="carousel" id="services">
+         <div class="carousel" id="services">
             <h2>Our <span>Services</span></h2>
             <button class="carousel__button carousel__button--left hidden"> 
                 <img src="./img/arrow-left.svg" alt="">
@@ -89,11 +87,11 @@
                 <ul class="carousel__track">
 
 
-                    <li class="carousel__slide current-slide">
-                        <div class=" service service1">
+                    <li class="carousel__slide current-slide" id="service1">
+                        <div class="service service1">
                             <div>
                                 <h3>Interior</h3>
-                                <button class="btn btn-red">More Info</button>
+                                <button class="btn btn-red info current-m-button">More Info</button>
                             </div>
             
                             <div class="more-info">
@@ -104,14 +102,14 @@
                                     <li>Pictures</li>
                                     <li>Windows</li>
                                     <li>Carpentry</li>
-                                    <li>Shelving/storage assembly</li>
+                                    <li>Shelving / storage assembly</li>
                                     <li>Furniture assembly</li>
                                     <li>Painting</li>
                                     <li>Wallpaper</li>
                                     <li>Blinds/curtains</li>
                                     <li>General Repairs</li>
                                 </ul>
-                                <button class="btn btn-red">Less Info</button>
+                                <button class="btn btn-red info current-l-button">Less Info</button>
                             </div>
                         </div>
                     </li>
@@ -123,7 +121,7 @@
                         <div class="service service2">
                             <div>
                                 <h3>Kitchen</h3>
-                                <button class="btn btn-red">More Info</button>
+                                <button class="btn btn-red info">More Info</button>
                             </div>
             
                             <div class="more-info">
@@ -135,7 +133,7 @@
                                     <li>Appliances</li>
             
                                 </ul>
-                                <button class="btn btn-red">Less Info</button>
+                                <button class="btn btn-red info">Less Info</button>
                             </div>
                         </div>
                     </li>
@@ -147,7 +145,7 @@
                         <div class="service service3">
                             <div>
                                 <h3>Bedroom</h3>
-                                <button class="btn btn-red">More Info</button>
+                                <button class="btn btn-red info">More Info</button>
                             </div>
             
                             <div class="more-info">
@@ -158,18 +156,18 @@
                                     <li>Furniture Assembly</li>
                                     <li>Appliances</li>
                                 </ul>
-                                <button class="btn btn-red">Less Info</button>
+                                <button class="btn btn-red info">Less Info</button>
                             </div>
                         </div>
 
                     </li>
 
 
-                    <li class="carousel__slide">
+                    <li class="carousel__slide" id="service4">
                         <div class="service service4">
                             <div>
                                 <h3>Exterior</h3>
-                                <button class="btn btn-red">More Info</button>
+                                <button class="btn btn-red info">More Info</button>
                             </div>
             
                             <div class="more-info">
@@ -186,7 +184,7 @@
                                     <li>Pet homes/doors</li>
             
                                 </ul>
-                                <button class="btn btn-red">Less Info</button>
+                                <button class="btn btn-red info">Less Info</button>
                             </div>
                         </div>
                     </li>
@@ -196,7 +194,7 @@
                         <div class="service service5">
                             <div>
                                 <h3>Plumbing</h3>
-                                <button class="btn btn-red">More Info</button>
+                                <button class="btn btn-red info">More Info</button>
                             </div>
             
                             <div class="more-info">
@@ -206,9 +204,9 @@
                                     <li>Water supplies</li>
                                     <li>Toilet Repair</li>
                                     <li>Sinks</li>
-                                    <li>Washing Machines/Dishwashers</li>
+                                    <li>Washing Machines / Dishwashers</li>
                                 </ul>
-                                <button class="btn btn-red">Less Info</button>
+                                <button class="btn btn-red info">Less Info</button>
                             </div>
                         </div>
 
@@ -221,7 +219,7 @@
                         <div class="service service6">
                             <div>
                                 <h3>Bathroom</h3>
-                                <button class="btn btn-red">More Info</button>
+                                <button class="btn btn-red info">More Info</button>
                             </div>
             
                             <div class="more-info">
@@ -233,7 +231,7 @@
                                     <li>Towel Racks</li>
                                     <li>Grout</li>
                                 </ul>
-                                <button class="btn btn-red">Less Info</button>
+                                <button class="btn btn-red info">Less Info</button>
                             </div>
                         </div>
                     </li>
@@ -243,19 +241,18 @@
                         <div class="service service7">
                             <div>
                                 <h3>Electrical</h3>
-                                <button class="btn btn-red">More Info</button>
+                                <button class="btn btn-red info">More Info</button>
                             </div>
             
                             <div class="more-info">
                                 <ul>
-                                    <li>Light switches</li>
-                                    <li>Dimmer switches</li>
+                                    <li>Light / Dimmer switches</li>
                                     <li>Ceiling Fans</li>
                                     <li>Extractor Fans</li>
                                     <li>Circuit Breaker</li>
                                     <li>Sockets</li>
                                 </ul>
-                                <button class="btn btn-red">Less Info</button>
+                                <button class="btn btn-red info">Less Info</button>
                             </div>
                         </div>
 
@@ -265,7 +262,6 @@
         
                 </ul>
             </div>
-        <!-- </section> -->
 
             <button class="carousel__button carousel__button--right"> 
                 <img src="./img/arrow-right.svg" alt="">
@@ -280,145 +276,7 @@
                 <button class="carousel__indicator"></button>
                 <button class="carousel__indicator"></button>
             </div>
-        </div>
-
-
-    <!-- <section id="services">
-        <div class="services">
-            <h2>Our <span>Services</span></h2>
-    
-            <div class="service1">
-                <h4>Interior</h4>
-                <button class="btn">More Info</button>
-
-                <div class="more-info">
-                    <ul>
-                        <li>Flooring</li>
-                        <li>Doors</li>
-                        <li>Mirrors</li>
-                        <li>Pictures</li>
-                        <li>Windows</li>
-                        <li>Carpentry</li>
-                        <li>Shelving/storage assembly</li>
-                        <li>Furniture assembly</li>
-                        <li>Painting</li>
-                        <li>Wallpaper</li>
-                        <li>Blinds/curtains</li>
-                        <li>General Repairs</li>
-                    </ul>
-                    <button class="btn">Less Info</button>
-                </div>
-            </div>
-
-
-
-            <div class="service2">
-                <h4>Kitchen</h4>
-                <button class="btn">More Info</button>
-
-                <div class="more-info">
-                    <ul>
-                        <li>Sinks</li>
-                        <li>Garbage Disposal</li>
-                        <li>Counter Tops</li>
-                        <li>Cabinets</li>
-                        <li>Appliances</li>
-
-                    </ul>
-                    <button class="btn">Less Info</button>
-                </div>
-            </div>
-
-            <div class="service3">
-                <h4>Bedroom</h4>
-                <button class="btn">More Info</button>
-
-                <div class="more-info">
-                    <ul>
-                        <li>Closets</li>
-                        <li>Shelving</li>
-                        <li>Organizer</li>
-                        <li>Furniture Assembly</li>
-                        <li>Appliances</li>
-                    </ul>
-                    <button class="btn">Less Info</button>
-                </div>
-            </div>
-
-            <div class="service4">
-                <h4>Exterior</h4>
-                <button class="btn">More Info</button>
-
-                <div class="more-info">
-                    <ul>
-                        <li>Fences / Gates</li>
-                        <li>Gutters</li>
-                        <li>Siding, Fascia, and Soffit</li>
-                        <li>Windows</li>
-                        <li>Caulking</li>
-                        <li>Brick work</li>
-                        <li>Stone/Decorative Walkway</li>
-                        <li>Cement</li>
-                        <li>Painting</li>
-                        <li>Pet homes/doors</li>
-
-                    </ul>
-                    <button class="btn">Less Info</button>
-                </div>
-            </div>
-
-            <div class="service5">
-                <h4>Plumbing</h4>
-                <button class="btn">More Info</button>
-
-                <div class="more-info">
-                    <ul>
-                        <li>Fixtures</li>
-                        <li>Leaks</li>
-                        <li>Water supplies</li>
-                        <li>Toilet Repair</li>
-                        <li>Sinks</li>
-                        <li>Washing Machines/Dishwashers</li>
-                    </ul>
-                    <button class="btn">Less Info</button>
-                </div>
-            </div>
-
-            <div class="service6">
-                <h4>Bathroom</h4>
-                <button class="btn">More Info</button>
-
-                <div class="more-info">
-                    <ul>
-                        <li>Tiles</li>
-                        <li>Showers</li>
-                        <li>Toilets</li>
-                        <li>Sinks</li>
-                        <li>Towel Racks</li>
-                        <li>Grout</li>
-                    </ul>
-                    <button class="btn">Less Info</button>
-                </div>
-            </div>
-
-            <div class="service7">
-                <h4>Electrical</h4>
-                <button class="btn">More Info</button>
-
-                <div class="more-info">
-                    <ul>
-                        <li>Light switches</li>
-                        <li>Dimmer switches</li>
-                        <li>Ceiling Fans</li>
-                        <li>Extractor Fans</li>
-                        <li>Circuit Breaker</li>
-                        <li>Sockets</li>
-                    </ul>
-                    <button class="btn">Less Info</button>
-                </div>
-            </div>
-        </div>
-    </section> -->
+        </div> 
 
 
     <section class="dont-find">
