@@ -12,7 +12,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    /* color: var(--dark-gray); */
+
 }
 
 img {
@@ -20,7 +20,7 @@ img {
 }
 
 span {
-    color: var(--red)
+    color: var(--red);
 }
 
 .btn {
@@ -33,6 +33,13 @@ span {
 .btn-light {
     color: var(--light-gray);
     border-color:  var(--light-gray);
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+}
+
+.btn-light {
+    color: var(--red);
+    border-color:  var(--red);
     transition: all 500ms ease-in-out;
     cursor: pointer;
 }
@@ -69,8 +76,10 @@ span {
 header{
     position: fixed;
     width: 100%;
-    background: #FFF;
+    height: 10vh;
+    /* height: auto; */
     /* opacity: .5; */
+    z-index: 2;
 }
 
 nav {
@@ -79,6 +88,9 @@ nav {
     grid-template-columns: 5% 1fr 1.5fr 5%;
     align-items: center;
     position: relative;
+    background: #FFF;
+    /* background: rgba(0,0,0,.5); */
+    height: 100%;
 }
 
 .nav-links {
@@ -142,6 +154,14 @@ nav {
 }
 
 @media(min-width: 768px) { 
+
+    header{
+        position: fixed;
+        width: 100%;
+        height: auto;
+        z-index: 2;
+    }
+
     .nav-links {
         list-style-type: none;
         display: block;
@@ -165,9 +185,15 @@ nav {
         color: var(--dark-gray);
     }
     
+
     .logo {
         grid-column: 2/3;;
         height: 90%;
+        /* background: #fff; */
+    }
+
+    .nav-container {
+
     }
     
     .hamburger {
@@ -407,3 +433,231 @@ nav {
     }
 }
 
+
+/*  ****************************************
+
+                How We Work 
+
+****************************************   */  
+
+.how {
+    text-align: center;
+    padding-top: 2rem;
+    background: var(--light-gray);
+}
+
+.how h2 {
+    margin-bottom: 2rem;
+}
+
+.step-grid {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.step {
+    margin-bottom: 2rem;
+
+}
+
+.step img {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+@media(min-width: 700px){
+    
+    .step-grid {
+        display: grid;
+        grid-template-columns: 5% 1fr 1fr 1fr 5%;
+    }
+    
+    .step1 {
+        grid-column: 2/3;
+    }
+}
+
+
+@media(min-width: 1200px) {
+    .how h2 {
+        font-size: 2rem;
+    }
+
+    .step p {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media(min-width: 1440px) {
+    .how h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/*  ****************************************
+
+                Services
+
+****************************************   */  
+
+#services {
+    /* background: var(--light-gray); */
+    text-align: center;
+    padding: 2rem 0;
+    /* padding-bottom: 2rem; */
+
+}
+
+.services {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.service {
+    height: 100%;
+    position: relative;
+    background: var(--dark-gray);
+    color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+
+.service h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.more-info {
+    position: absolute;
+    top: 0%;
+    /* transform: translateY(-50%); */
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--dark-gray);
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.more-info ul {
+    list-style: none;
+}
+
+
+
+/*  ****************************************
+
+                Carousel
+
+****************************************   */  
+
+
+.carousel {
+    position: relative;
+    height: 300px;
+    width: 70%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel__track-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel__track {
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 500ms ease-in;
+}
+
+.carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.carousel__button--left {
+    left: -40px;
+}
+
+.carousel__button--right {
+    right: -40px;
+}
+
+.carousel__button img{
+    width: 20px;
+    outline: none;
+}
+
+.carousel__nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0; 
+
+}
+
+.carousel__indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba(0,0,0,.3);
+    margin: 0 .5rem;
+    cursor: pointer;
+    transition: all 300ms ease-in;
+    outline: none;
+}
+
+.carousel__indicator.current-slide {
+    height: 16px;
+    width: 16px;
+    background: rgba(0,0,0, .7);
+}
+
+.hidden {
+    display: none;
+}
+
+
+/*  ****************************************
+
+                Dont - Find
+
+****************************************   */  
+
+.dont-find {
+    margin-top: 5rem;
+    background: var(--red);
+    color: var(--light-gray);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.dont-find .text {
+    width: 60%;
+    margin: 0 auto;
+}

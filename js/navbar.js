@@ -23,14 +23,18 @@ links.forEach(link => {
 });
 
 
-function smoothscroll(target, duration) {
-    var target = document.querySelector(target);
-    var targetPosition = target.getBoundingClientRect();
-    console.log(targetPosition);
-}
+// function smoothscroll(target, duration) {
+//     var target = document.querySelector(target);
+//     var targetPosition = target.getBoundingClientRect();
+//     console.log(targetPosition);
+// }
 
 var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 300,
+    speed: 600,
     offset: navheight,
     updateURL: false
 });
+
+
+
+console.log('navbar activated');
