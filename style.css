@@ -98,11 +98,14 @@ nav {
     clip-path: circle(50px at 110% -10%);
     -webkit-clip-path: circle(50px at 110% -10%);
     transition: all 500ms ease-in-out;
+    opacity: 0;
+    /* display: none; */
 }
 
 .nav-links.open {
     clip-path: circle(1600px at 90% -10%);
     -webkit-clip-path: circle(1600px at 90% -10%);
+    opacity: 1;
 }
 
 
