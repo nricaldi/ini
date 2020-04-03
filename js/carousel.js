@@ -93,12 +93,6 @@ function myFunction(x) {
 
     } 
     else {
-        // const track = document.querySelector('.carousel__track');
-        // const slides = Array.from(track.children);
-        // const setSlidePosition = (slide, index) => {
-        //     slide.style.position = 'relative';
-        // };
-        // slides.forEach(setSlidePosition);
         (function()
         {
           if( window.localStorage )
