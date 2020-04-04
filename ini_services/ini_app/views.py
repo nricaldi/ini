@@ -3,10 +3,10 @@ from .models import *
 import os
 import smtplib
 
-# EMAIL_ADDRESS = os.environ.get('EMAIL_USER')
-# EMAIL_PASSWORD = os.environ.get('EMAIL_PASS')
-EMAIL_ADDRESS = 'nricaldi.nr@gmail.com'
-EMAIL_PASSWORD = 'ipxmcaozywksjklc'
+EMAIL_ADDRESS = os.environ.get('EMAIL_USER')
+EMAIL_PASSWORD = os.environ.get('EMAIL_PASS')
+# EMAIL_ADDRESS = 'nricaldi.nr@gmail.com'
+# EMAIL_PASSWORD = 'ipxmcaozywksjklc'
 
 
 # Create your views here.
@@ -14,7 +14,9 @@ def index(request):
     context = {
         "all_testimonials": Testimonial.objects.all().order_by("created_at")
     }
-
+    # print(EMAIL_ADDRESS);
+    # print(EMAIL_PASSWORD);
+    # print(os.environ)
     return render(request, "index.html", context)
 
 def leave_review(request, method="POST"):
@@ -28,6 +30,17 @@ def send_mail(request, method="POST"):
         smtp.ehlo()
         smtp.starttls()
         smtp.ehlo()
+        
+        # print('hello')
+        # print('hello')
+        # print('hello')
+        # print('hello')
+        # print(EMAIL_ADDRESS);
+        # print(EMAIL_PASSWORD);
+        # print('hello')
+        # print('hello')
+        # print('hello')
+        # print('hello')
 
         smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
 
