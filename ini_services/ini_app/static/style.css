@@ -448,8 +448,9 @@ nav {
 .step-grid {
     display: flex;
     flex-direction: column;
-    max-width: 1440px;
+    max-width: 1500px;
     margin: 0 auto;
+    padding-bottom: 1rem;
 }
 
 .step {
@@ -549,10 +550,11 @@ nav {
 .more-info ul li {
     display: inline-block;
     border: solid 1px var(--red);
-    padding: 5px;
+    /* border: solid 1px var(--light-gray); */
+    /* background: var(--red); */
+    padding: 3.5px;
     margin-right: 5px;
     margin-bottom: 8px;
-
 }
 
 
@@ -602,7 +604,6 @@ nav {
     
     .more-info ul li {
         display: inline-block;
-        border: solid 1px var(--red);
         padding: 5px;
         margin-right: 5px;
         margin-bottom: 8px;
@@ -753,11 +754,12 @@ nav {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        grid-column-gap: 1rem;
+        /* grid-column-gap: 1rem; */
+        grid-gap: 1rem;
     }
 
     .carousel__slide {
-         margin-bottom: 1rem;
+         /* margin-bottom: 1rem; */
     }
     #service1 {
         grid-column: 1/3;
@@ -792,7 +794,7 @@ nav {
 }
 
 .dont-find .text {
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -962,7 +964,7 @@ nav {
 .testimonials {
     text-align: center;
     padding-top: 2rem;
-    max-width: 1500px;
+    max-width: 1565px;
     margin: 0 auto;
 }
 
@@ -989,7 +991,7 @@ nav {
     color: var(--red);
 }
 
-.testimonials p {
+.testimonial p {
     padding: 1rem;
     padding-bottom: 0;
     color: rgba(0,0,0,.5);
@@ -1030,10 +1032,127 @@ nav {
     }
 }
 
+/*  ****************************************
+
+            Review
+
+****************************************   */  
+
+.review-form {
+    text-align: center;
+    color: var(--dark-gray);
+    padding: 2rem;
+    /* background: var(--dark-gray); */
+    /* background: var(--red); */
+}
+
+.review-form h2 {
+    margin-bottom: 2rem;
+    
+}
+
+.review-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    /* padding: 1rem; */
+    /* margin-left: auto; */
+    /* box-shadow: 10px 10px 30px rgba(0,0,0, .3); */
+    /* padding: 2rem .5rem; */
+    /* background: rgba(0,0,0,.3); */
+    /* background: var(--red); */
+}
+
+.review-form form input, .review-form form textarea{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1em;
+    font-size: 1rem;
+    border: none;
+}
+
+.review-form form .review-name {
+    grid-column: 1/2;
+    padding-right: 0;
+}
+
+.review-form form .review-rating .select {
+    grid-column: 2/3;
+    padding-left: 0;
+}
+
+.review-form form input, 
+.review-form form textarea, 
+.review-rating select {
+    /* background: var(--light-gray); */
+    border: none;
+    border: solid 2px rgb(187, 187, 187);
+    border-radius: 0px;
+    /* border: solid 2px var(--red); */
+    /* box-shadow: 10px 10px 20px rgba(0,0,0, .2); */
+}
+
+.review-rating select {
+    background: #FFF;
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+    /* border: none; */
+    cursor: pointer;
+    /* background: red; */
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+.review-rating {
+    position: relative;
+}
+
+.review-rating::after {
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 50%;
+    margin-top: -5px;
+    border-top: 8px solid var(--red);
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    pointer-events: none;
+}
+
+
+  
+.review-form form .full {
+    grid-column: 1/3;
+}
+
+.review-form form .full textarea {
+    resize: vertical;
+}
+
+.review-form form .button {
+    grid-column: 2/3;
+}
+
+.review-form form .button button {
+    width: 100%;
+}
+
+
+@media(min-width: 900px) {
+    .review-form h2 {
+        font-size: 2rem;
+    }
+
+}
+
+
 
 /*  ****************************************
 
-            CSS GRID
+            Contact
 
 ****************************************   */  
 
@@ -1043,7 +1162,7 @@ nav {
 }
 
 .contact-grid {
-    max-width: 1440px;
+    max-width: 1500px;
     margin: 0 auto;
 
 }
@@ -1086,24 +1205,24 @@ nav {
     margin: .5rem 0;
 }
 
-.form {
+.contact-form {
     background: var(--red);
     text-align: center;
     color: #FFF;
     padding: 2rem 0;
 }
 
-.form h2 {
+.contact-form h2 {
     margin-bottom: 1rem;
 }
 
-form {
+.contact-form form {
     display: grid;
     grid-template-columns: 5% 1fr 1fr 5%;
     grid-gap: 1rem;
 }
 
-.form form input, .form form textarea{
+.contact-form form input, .contact-form form textarea{
     box-sizing: border-box;
     width: 100%;
     padding: 1em;
@@ -1111,27 +1230,27 @@ form {
     border: none;
 }
 
-form .form-name {
+.contact-form form .form-name {
     grid-column: 2/3;
 }
 
-form .form-email {
+.contact-form form .form-email {
     grid-column: 3/4;
 }
   
-form .full {
+.contact-form form .full {
     grid-column: 2/4;
 }
 
-form .full textarea {
+.contact-form form .full textarea {
     resize: vertical;
 }
 
-form .button {
+.contact-form form .button {
     grid-column: 3/4;
 }
 
-form .button button {
+.contact-form form .button button {
     width: 100%;
 }
 
@@ -1141,13 +1260,13 @@ form .button button {
         grid-template-columns: 2fr 1fr;
     }
 
-    .form {
+    .contact-form {
         text-align: left;
         grid-column: 1/2;
         grid-row: 1/2;
     }
 
-    .form h2 {
+    .contact-form h2 {
         font-size: 2rem;
         padding: .7rem 0;
         margin-left: 7%;
@@ -1177,8 +1296,6 @@ form .button button {
 }
 
 
-
-
 /*  ****************************************
 
             CSS GRID
@@ -1188,6 +1305,16 @@ form .button button {
 
 
 footer {
-    background: var(--dark-gray);
-    height: 1000px
+    background: #373737;
+    height: 200px;
+}
+
+.footer-container {
+    color: var(--light-gray);
+    max-width: 1500px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

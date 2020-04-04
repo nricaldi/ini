@@ -1,16 +1,6 @@
-
-console.log('carousel activated');
-
-
-// window.onresize = () => {
-//     console.log(window.innerWidth);
-//     // if(window.innerWidth == 850) 
-//     //     location.reload()
-// }
-
 function myFunction(x) {
-    if (x.matches) { // If media query matches
-    //   document.body.style.backgroundColor = "yellow";
+    // If media query matches
+    if (x.matches) {
         const track = document.querySelector('.carousel__track');
         const slides = Array.from(track.children);
         const next = document.querySelector('.carousel__button--right');
@@ -68,8 +58,6 @@ function myFunction(x) {
             const currentDot = dotsNav.querySelector('.current-slide');
             const previousDot = currentDot.previousElementSibling;
 
-            console.log(previousSlide);
-
             moveSlide(track, currentSlide, previousSlide);
             updateDots(currentDot, previousDot);
             checkNav(previousSlide);
@@ -113,7 +101,3 @@ function myFunction(x) {
 var x = window.matchMedia("(max-width: 849px)")
 myFunction(x) // Call listener function at run time
 x.addListener(myFunction) // Attach listener function on state changes
-
-// var x = window.matchMedia("(max-width: 850px)")
-// myFunction(x) // Call listener function at run time
-

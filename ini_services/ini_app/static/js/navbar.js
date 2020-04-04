@@ -28,7 +28,3 @@ var scroll = new SmoothScroll('a[href*="#"]', {
     offset: navheight,
     updateURL: false
 });
-
-
-
-console.log('navbar activated');
