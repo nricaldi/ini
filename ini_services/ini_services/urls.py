@@ -20,6 +20,6 @@ from ini_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('leave_review', views.leave_review),
+    path('create_review', views.create_review),
     path('send_mail', views.send_mail)
 ]

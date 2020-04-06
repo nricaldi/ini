@@ -256,7 +256,6 @@
         <div class="dont-find">
             <div class="text">
                 <p>Don't find what you're looking for? <a href="#contact">Contact us</a> and we'll get back to you ASAP.</p>
-                <!-- <p>Or give us a call at <a href="tel:+1-703-582-9734">703-582-9734</a></p> -->
             </div>
         </div>
         <div class="why-grid">
@@ -286,7 +285,7 @@
     <section class="testimonials">
         <h2>Client<span> Testimonials</span></h2>
 
-        <div class="testimonial-grid">
+        <div class="testimonial-grid" id="testimonial-grid">
             {% for testimonial in all_testimonials %}
             <div class="testimonial">
                 <div class="stars">
@@ -308,14 +307,15 @@
 
             <!-- {{ msg }} -->
 
-            <form action="/leave_review" method="post">
+            <div id="review_results"></div>
+            <form action="/create_review" method="post" id="review-form">
                 {% csrf_token %} 
                 <p class="review-name">
-                    <input type="text" name="name" placeholder="Name"></input>
+                    <input type="text" name="name" placeholder="Name" id="review-name"></input>
                 </p>
 
                 <div class="review-rating">
-                    <select name="rating">
+                    <select name="rating" id="review-rating">
                         <option value="1">&#9733;&#9734;&#9734;&#9734;&#9734;</option>
                         <option value="2">&#9733;&#9733;&#9734;&#9734;&#9734;</option>
                         <option value="3">&#9733;&#9733;&#9733;&#9734;&#9734;</option>
@@ -326,7 +326,7 @@
                 </div>
 
                 <p class="full">
-                    <textarea name="message" rows="5" placeholder="Message"></textarea>
+                    <textarea name="message" rows="5" placeholder="Message" id="review-message"></textarea>
                 </p>
 
                 <p class="button">
@@ -371,19 +371,20 @@
                 <h2>Get In Touch</h2>
     
                 <!-- {{ msg }} -->
+                <div id="contact_results"></div>
     
-                <form action="/send_mail" method="post">
+                <form action="/send_mail" method="post" id="contact-form">
                     {% csrf_token %} 
                     <p class="form-name">
-                        <input type="text" name="name" placeholder="Name"></input>
+                        <input type="text" name="name" placeholder="Name" id="contact-name"></input>
                     </p>
     
                     <p class="form-email">
-                        <input type="email" name="email" placeholder="Email"></input>
+                        <input type="email" name="email" placeholder="Email" id="contact-email"></input>
                     </p>
     
                     <p class="full">
-                        <textarea name="message" rows="10" placeholder="Message"></textarea>
+                        <textarea name="message" rows="10" placeholder="Message" id="contact-message"></textarea>
                     </p>
     
                     <p class="button">
@@ -402,8 +403,10 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/7e3e6f27d8.js" crossorigin="anonymous"></script>
     <script src="{% static 'js/navbar.js' %}" type="text/javascript" ></script>
     <script src="{% static 'js/carousel.js' %}" type="text/javascript" ></script>
+    <script src="{% static 'js/forms.js' %}" type="text/javascript" ></script>
 </body>
 </html>

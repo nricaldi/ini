@@ -1038,12 +1038,21 @@ nav {
 
 ****************************************   */  
 
+#review_results p{
+    margin-bottom: 1rem;
+    color: var(--red);
+}
+
+#contact_results p{
+    margin-bottom: 1rem;
+}
+
+
+
 .review-form {
     text-align: center;
     color: var(--dark-gray);
     padding: 2rem;
-    /* background: var(--dark-gray); */
-    /* background: var(--red); */
 }
 
 .review-form h2 {
@@ -1057,12 +1066,6 @@ nav {
     grid-gap: 1rem;
     max-width: 600px;
     margin: 0 auto;
-    /* padding: 1rem; */
-    /* margin-left: auto; */
-    /* box-shadow: 10px 10px 30px rgba(0,0,0, .3); */
-    /* padding: 2rem .5rem; */
-    /* background: rgba(0,0,0,.3); */
-    /* background: var(--red); */
 }
 
 .review-form form input, .review-form form textarea{
@@ -1086,12 +1089,15 @@ nav {
 .review-form form input, 
 .review-form form textarea, 
 .review-rating select {
-    /* background: var(--light-gray); */
     border: none;
     border: solid 2px rgb(187, 187, 187);
     border-radius: 0px;
-    /* border: solid 2px var(--red); */
-    /* box-shadow: 10px 10px 20px rgba(0,0,0, .2); */
+}
+
+.review-form form input:focus, 
+.review-form form textarea:focus, 
+.review-rating select:focus {
+    border-color: var(--red);
 }
 
 .review-rating select {
@@ -1306,7 +1312,7 @@ nav {
 
 footer {
     background: #373737;
-    height: 200px;
+    height: 100px;
 }
 
 .footer-container {
