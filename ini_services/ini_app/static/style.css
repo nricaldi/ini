@@ -1043,12 +1043,6 @@ nav {
     color: var(--red);
 }
 
-#contact_results p{
-    margin-bottom: 1rem;
-}
-
-
-
 .review-form {
     text-align: center;
     color: var(--dark-gray);
@@ -1167,6 +1161,10 @@ nav {
     background: #373737;
 }
 
+#contact_results p{
+    margin-bottom: 1rem;
+}
+ 
 .contact-grid {
     max-width: 1500px;
     margin: 0 auto;
@@ -1277,7 +1275,10 @@ nav {
         padding: .7rem 0;
         margin-left: 7%;
     }
-    
+
+    #contact_results {
+        margin-left: 7%;
+    }
 
     .reach-us {
         grid-column: 2/4;
