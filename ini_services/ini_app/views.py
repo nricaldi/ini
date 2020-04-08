@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django.contrib import messages
-from .models import *
+from .models import Testimonial
 import os
 import smtplib
 # import simplejson as json
@@ -13,34 +12,20 @@ EMAIL_PASSWORD = os.environ.get('EMAIL_PASS')
 # Create your views here.
 def index(request): 
 
-    # review_form = ReviewForm()
+    all_reviews = Testimonial.objects.all().order_by("created_at")
 
     context = {
-        "all_testimonials": Testimonial.objects.all().order_by("created_at"),
+        "all_testimonials": all_reviews,
         # "form": review_form
     }
 
     return render(request, "index.html", context)
 
 def create_review(request):
-    
-    errors = Testimonial.objects.testimonial_validator(request.POST)
-
-    # if len(errors) > 0:
-    #     # request.session['try'] = "register"
-    #     for key, value in errors.items():
-    #         messages.error(request, value)
-
-    #     # for message in errors:
-    #     #     print(message)
-    #     return redirect("/")
-
     if request.method == 'POST':
         name = request.POST.get('name')
         rating = request.POST.get('rating')
         message = request.POST.get('message')
-
-        response_data = {}
         
         review = Testimonial(name=name, rating=rating, message=message)
         review.save()
@@ -67,7 +52,11 @@ def send_mail(request, method="POST"):
 
         msg = f'Subject: {subject}\n\n{body}'
 
-        smtp.sendmail(EMAIL_ADDRESS, 'nr.ricaldi@gmail.com', msg)
+        smtp.sendmail(EMAIL_ADDRESS, 'ini1services@gmail.com', msg)
 
     # return redirect("/")
     return HttpResponse()
+
+
+def gallery(request):
+    return render(request, "gallery.html")

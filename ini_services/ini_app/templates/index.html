@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="INI services is the most professional home improvement service in the DC Maryland Virgina area.">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-
+    <link rel="stylesheet" href="{% static 'style/index.css' %}">
+    <script src="https://kit.fontawesome.com/7e3e6f27d8.js" crossorigin="anonymous"></script>
     <title>INI Services</title>
 </head>
 <body>
     <header id="home">
         <nav id="nav">
 
-            <img src="{% static 'img/logo.svg' %}" alt="logo" class="logo">
+            <img src="{% static 'img/logo-gray.svg' %}" alt="logo" class="logo">
 
             <div class="hamburger">
                 <div class="line"></div>
@@ -25,15 +25,16 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="/gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        </header>
+    </header>
 
-    <section class="hero">
-        <div>
-            <h1>We build <span>your</span> dreams</h1>
-            <h1>into <span>reality.</span></h1>
+    <section class="hero" id="bg">
+        <div id="heading">
+            <h1 class="anim1">We build <span>your</span> dreams</h1>
+            <h1 class="anim1">into <span>reality.</span></h1>
         </div>
     </section>
 
@@ -342,15 +343,15 @@
         <h2><span>How</span> We Work</h2>
         <div class="step-grid">
             <div class="step step1">
-                <img src="{% static 'img/008-lightbulb.svg' %}" alt="idea">
+                <img src="{% static 'img/lightbulb-icon.svg' %}" alt="idea">
                 <p>Find your problem.</p>
             </div>
             <div class="step">
-                <img src="{% static 'img/009-voice.svg' %}" alt="voice">
+                <img src="{% static 'img/speech-icon.svg' %}" alt="voice">
                 <p>Tell us your problem.</p>
             </div>
             <div class="step">
-                <img src="{% static '/img/010-hammer.svg' %}" alt="hammer">
+                <img src="{% static '/img/hammer-icon.svg' %}" alt="hammer">
                 <p>We fix your problem.</p>
             </div>
         </div>
@@ -363,7 +364,7 @@
                 <h2><span>Reach</span> Us</h2>
                 <ul>
                     <li><i class="fas fa-map-marker-alt"></i> DMV Area</li>
-                    <li><i class="fas fa-phone-alt"></i> 7035829734</li>
+                    <li class="dark-number"><i class="fas fa-phone-alt"></i> (703)-582-9734</li>
                     <li><i class="fas fa-envelope"></i> ini1services@gmail.com</li>
                 </ul>
             </div>
@@ -398,15 +399,28 @@
 
     <footer>
         <div class="footer-container">
+            <div>
+                <ul>
+                    
+                </ul>
+                <ul>
+
+                </ul>
+            </div>
             <p>&copy; 2020 All rights reserved</p>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/7e3e6f27d8.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    
     <script src="{% static 'js/navbar.js' %}" type="text/javascript" ></script>
     <script src="{% static 'js/carousel.js' %}" type="text/javascript" ></script>
     <script src="{% static 'js/forms.js' %}" type="text/javascript" ></script>
+    <script src="{% static 'js/animations.js' %}" type="text/javascript" ></script>
 </body>
 </html>

@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
     path('create_review', views.create_review),
-    path('send_mail', views.send_mail)
+    path('send_mail', views.send_mail),
+    path('gallery', views.gallery)
 ]
