@@ -287,7 +287,7 @@
         <h2>Client<span> Testimonials</span></h2>
 
         <div class="testimonial-grid" id="testimonial-grid">
-            {% for testimonial in all_testimonials %}
+            {% for testimonial in last_three %}
             <div class="testimonial">
                 <div class="stars">
                     {% for i in "x"|ljust:testimonial.rating %}
@@ -305,8 +305,6 @@
 
         <div class="review-form">
             <h2>Leave a review</h2>
-
-            <!-- {{ msg }} -->
 
             <div id="review_results"></div>
             <form action="/create_review" method="post" id="review-form">
@@ -371,7 +369,6 @@
             <div class="contact-form">
                 <h2>Get In Touch</h2>
     
-                <!-- {{ msg }} -->
                 <div id="contact_results"></div>
     
                 <form action="/send_mail" method="post" id="contact-form">

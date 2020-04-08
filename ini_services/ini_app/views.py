@@ -3,8 +3,6 @@ from django.http import HttpResponse
 from .models import Testimonial
 import os
 import smtplib
-# import simplejson as json
-# from .forms import ReviewForm
 
 EMAIL_ADDRESS = os.environ.get('EMAIL_USER')
 EMAIL_PASSWORD = os.environ.get('EMAIL_PASS')
@@ -12,11 +10,17 @@ EMAIL_PASSWORD = os.environ.get('EMAIL_PASS')
 # Create your views here.
 def index(request): 
 
-    all_reviews = Testimonial.objects.all().order_by("created_at")
+    all_reviews = Testimonial.objects.all().order_by("-created_at")
+
+    last_three = []
+
+    if len(all_reviews) > 3:
+        for i in range(3):
+            last_three.append(all_reviews[i])
+        
 
     context = {
-        "all_testimonials": all_reviews,
-        # "form": review_form
+        "last_three": last_three
     }
 
     return render(request, "index.html", context)

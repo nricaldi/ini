@@ -31,3 +31,7 @@ const howScene = new ScrollMagic.Scene({
 })
 .setTween(tl3)
 .addTo(controller)
+
+
+// Animation for gallery
+gsap.from('.grid-item', {opacity:0, duration: 1, stagger: .5});
