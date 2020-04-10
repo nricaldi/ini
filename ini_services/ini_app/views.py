@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Testimonial
+from .models import Image
 import os
 import smtplib
 
@@ -17,6 +18,8 @@ def index(request):
     if len(all_reviews) > 3:
         for i in range(3):
             last_three.append(all_reviews[i])
+    else: 
+        last_three = all_reviews
         
 
     context = {
@@ -63,4 +66,10 @@ def send_mail(request, method="POST"):
 
 
 def gallery(request):
-    return render(request, "gallery.html")
+    all_images = Image.objects.all().order_by("-created_at")
+
+    context = {
+        "all_images": all_images
+    }
+
+    return render(request, "gallery.html", context)
