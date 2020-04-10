@@ -13,7 +13,7 @@ tl.to("#bg", 150,{
 
 // Animation for Services
 const tl2 = new TimelineMax();
-tl2.from('.service', {opacity: 0, duration: 1, stagger: .4, y: -200});
+tl2.from('.service', {opacity: 0, duration: 1, stagger: .2, y: -200});
 
 const serviceScene = new ScrollMagic.Scene({
     triggerElement: '#services'
@@ -34,4 +34,4 @@ const howScene = new ScrollMagic.Scene({
 
 
 // Animation for gallery
-gsap.from('.grid-item', {opacity:0, duration: 1, stagger: .5});
+gsap.from('.wrapper', {opacity:0, duration: 1, stagger: .5});
