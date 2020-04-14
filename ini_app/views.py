@@ -59,7 +59,9 @@ def send_mail(request, method="POST"):
 
         msg = f'Subject: {subject}\n\n{body}'
 
-        smtp.sendmail(EMAIL_ADDRESS, 'nricaldi.nr@gmail.com', msg)
+        receiver = 'nricaldi.nr@gmail.com'
+
+        smtp.sendmail(EMAIL_ADDRESS, receiver, msg)
 
     # return redirect("/")
     return HttpResponse()
